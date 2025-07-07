@@ -1,70 +1,56 @@
-Movie Recommendation System
+# Movie Recommendation System
 
-A Flask-based movie recommendation web app using TF-IDF similarity on movie metadata.
+This project is an **ML-powered movie recommendation system that uses TF-IDF vectorization** and **cosine similarity** to find similar movies based on their metadata (title, genre, director, cast). It prioritizes intelligent content-based recommendations using classical ML techniques without deep learning or embeddings. A simple **Flask API** powers the backend, while a lightweight JavaScript-based UI acts as an interface to query the model and display results.
 
-Features
+## Features
+ - Enter any movie or show title to receive intelligent recommendations
+ - Uses a machine learning-based hybrid algorithm leveraging TF-IDF vectorization and cosine similarity to match titles based on semantic relevance
+ - Prioritizes partial title matches, director, genre overlap (≥75%), and top-billed actors to improve recommendation quality
+ - Filters results by country and type (Movie / TV Show) to ensure contextual accuracy
+ - Displays detailed metadata: Title, Year, Genre, Description, Actors, and Director
+ - Designed to handle large datasets efficiently using vectorized operations and optimized similarity search
 
-- Search movie/show by title
-- Get top 5 recommended movies/shows based on metadata similarity
-- Filtered and ranked results with title, year, genre, description, actors, and director
-- Simple frontend with HTML, CSS, and JavaScript
-- Backend API built with Flask
+## Tech Stack
 
-Setup
+- Python 3.12+
+- Flask (backend API)
+- pandas, scikit-learn (TF-IDF, similarity)
+- Vanilla JavaScript (frontend)
+- HTML & CSS for UI
 
-1. Clone the repo
+## Project Structure
 
-git clone https://github.com/your-username/your-repo.git
-cd your-repo
-
-2. Create & activate virtual environment (optional but recommended)
-
-python -m venv venv
-# Windows
-venv\Scripts\activate
-# macOS/Linux
-source venv/bin/activate
-
-3. Install dependencies
-
-pip install -r requirements.txt
-
-4. Run the Flask server
-
-python server.py
-
-5. Open your browser and go to
-
-http://127.0.0.1:5000
-
-Usage
-
-- Enter a movie or show title in the input box
-- Click the button or press Enter
-- See top 5 recommended titles in a table below
-
-Project Structure
-
-data/
-    netflix.csv         # Dataset CSV file
+frontend/
+├── index.html
+├── style.css
+├── script.js
+└── server.py # Flask backend
 src/
-    preprocess.py       # Data cleaning and loading
-    recommender.py      # Recommendation logic using TF-IDF
-server.py               # Flask backend server
-index.html              # Frontend HTML page
-style.css               # CSS styling
-script.js               # Frontend JS fetching recommendations
-requirements.txt        # Python dependencies
-README.txt              # This file
+├── preprocess.py # Data loading and cleaning
+└── recommender.py # Recommendation logic
+data/
+└── netflix.csv # Dataset (Netflix movies and shows metadata)
 
-Dependencies
 
-- Flask
-- pandas
-- scikit-learn
+## Setup & Run
 
-License
+1. Clone the repo:
+   ```bash
+   git clone <repo_url>
+   cd <repo_folder>
 
-MIT License
 
-Enjoy exploring movie recommendations!
+2. Install dependencies:
+    ```bash
+    pip install -r requirements.txt
+
+3. Run the server:
+    ```bash
+    cd frontend
+    python server.py
+
+
+Notes
+ - Ensure netflix.csv dataset is present in the data folder.
+ - Customize and improve recommendation logic as needed.
+ - UI is minimal and can be enhanced with frameworks if desired.
