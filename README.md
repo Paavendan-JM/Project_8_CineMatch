@@ -18,20 +18,6 @@ This project is an **ML-powered movie recommendation system that uses TF-IDF vec
 - Vanilla JavaScript (frontend)
 - HTML & CSS for UI
 
-## Project Structure
-
-frontend/
-├── index.html
-├── style.css
-├── script.js
-└── server.py # Flask backend
-src/
-├── preprocess.py # Data loading and cleaning
-└── recommender.py # Recommendation logic
-data/
-└── netflix.csv # Dataset (Netflix movies and shows metadata)
-
-
 ## Setup & Run
 
 1. Clone the repo:
