@@ -2,6 +2,9 @@
 
 This project is an **ML-powered movie recommendation system that uses TF-IDF vectorization** and **cosine similarity** to find similar movies based on their metadata (title, genre, director, cast). It prioritizes intelligent content-based recommendations using classical ML techniques without deep learning or embeddings. A simple **Flask API** powers the backend, while a lightweight JavaScript-based UI acts as an interface to query the model and display results.
 
+Sample suggestion:
+![CineMatch Banner](banner3.jpeg)
+
 ## Features
  - Enter any movie or show title to receive intelligent recommendations
  - Uses a machine learning-based hybrid algorithm leveraging TF-IDF vectorization and cosine similarity to match titles based on semantic relevance
